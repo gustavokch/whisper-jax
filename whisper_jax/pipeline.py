@@ -23,7 +23,7 @@ import requests
 from flax import jax_utils
 from flax.core.frozen_dict import freeze
 from flax.training.common_utils import shard
-from jax.sharding import PartitionSpec as P
+from jax.experimental.pjit import PartitionSpec as P
 from transformers import WhisperProcessor
 from transformers.models.whisper.tokenization_whisper import TO_LANGUAGE_CODE
 from transformers.pipelines.audio_utils import ffmpeg_read
