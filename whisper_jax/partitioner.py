@@ -32,9 +32,8 @@ from jax import random
 from jax.experimental import multihost_utils
 from jax.experimental.mesh_utils import create_hybrid_device_mesh
 from jax.experimental.pjit import pjit as jax_pjit
+from jax.experimental.pjit import PartitionSpec
 from jax.experimental.maps import Mesh
-from jax.sharding import PartitionSpec
-
 
 JaxDevice = Any
 TpuMesh = Tuple[int, int, int, int]  # (x, y, z, num_cores).
